@@ -19,27 +19,32 @@
         @theme {
           --color-clifford: #da373d;
           --color-heading: #111111;
+          --color-description: #EFEBE3;
           --color-title: #179800;
           --font-sora: "Sora", serif;
         }
       </style>
 </head>
-<body>
+<body class="font-sora box-border">
     <!-- header part in html start -->
-    <header class="bg-gradient-to-t from-white to-100% to-[#EFEBE3]">
+    <header class="bg-gradient-to-b from-[#FFFFFF] to-[#EFEBE3]">
         <!-- navigation part start -->
-         <nav class="container mx-auto px-4 lg:px-10">
+         <nav class="container mx-auto">
             <div class="navbar bg-base-100">
+                <!-- navbar start -->
                 <div class="navbar-start">
-                  <a class="text-xl"><img src="assets/image/logo-header.png" alt=""></a>
+                  <a class="text-xl hidden sm:block"><img src="./assets/image/logo-header.png" alt=""></a>
+                  <a class="text-xl md:hidden block"><img src="./assets/image/mobil.png" alt=""></a>
                 </div>
-                <div class="navbar-center hidden lg:flex">
+                <!-- navbar center -->
+                <div class="navbar-center hidden lg:block">
                     <ul class="menu menu-horizontal px-1">
-                      <li><a class="text-[#111111] text-xl">Product</a></li>
-                      <li><a class="text-[#111111]  text-xl">Services</a></li>
-                      <li><a class="text-[#111111]  text-xl">Contact us</a></li>
+                      <li><a class="text-heading text-xl">Product</a></li>
+                      <li><a class="text-heading text-xl">Services</a></li>
+                      <li><a class="text-heading text-xl">Contact us</a></li>
                     </ul>
                 </div>
+                <!-- navbar end -->
                 <div class="navbar-end">
                     <!-- toggle bar menu -->
                     <div class="dropdown dropdown-end">
@@ -75,9 +80,22 @@
                     </div>
                 </div>
             </div>
+            <p class="border-b-2 border-[#179800] block sm:hidden"></p>
          </nav>
     </header>
-    
+    <!-- banner part start -->
+    <section class="container mx-auto">
+        <!-- banner contain -->
+          <div class="mt-12 w-10/12 mx-auto text-center">
+            <h1 class="text-heading text-[32px] md:text-[56px] font-semibold">Freshness <span class="text-[#179800]">You Can <br>
+                Count </span> On, Prices You’ll Love!</h1>
+            <p class="text-heading text-base md:text-xl font-light md:font-normal mt-8">Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br> staples, we’ve got you covered every day!</p>
+          </div>
+          <!-- banner image -->
+           <div class="w-full justify-items-center">
+            <img src="./assets/image/hero-vegetables.png" alt="" class="w-fit">
+           </div>
+    </section>
     <!-- main part in html start -->
     <main>
 
