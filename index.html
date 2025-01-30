@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <!-- fontawsome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- daisyUi cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,10 +18,74 @@
     <style type="text/tailwindcss">
         @theme {
           --color-clifford: #da373d;
+          --color-heading: #111111;
+          --color-title: #179800;
+          --font-sora: "Sora", serif;
         }
       </style>
 </head>
 <body>
+    <!-- header part in html start -->
+    <header class="bg-gradient-to-t from-white to-100% to-[#EFEBE3]">
+        <!-- navigation part start -->
+         <nav class="container mx-auto px-4 lg:px-10">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <a class="text-xl"><img src="assets/image/logo-header.png" alt=""></a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                      <li><a class="text-[#111111] text-xl">Product</a></li>
+                      <li><a class="text-[#111111]  text-xl">Services</a></li>
+                      <li><a class="text-[#111111]  text-xl">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <!-- toggle bar menu -->
+                    <div class="dropdown dropdown-end">
+                      <div tabindex="0" role="button" class="btn btn-ghost btn-circle sm:hidden">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 text-title"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                      </div>
+                      <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow overflow-hidden">
+                        <li><a class="text-[#111111] text-xl">Homepage</a></li>
+                        <li><a class="text-[#111111] text-xl">Portfolio</a></li>
+                        <li><a class="text-[#111111] text-xl">About</a></li>
+                      </ul>
+                    </div>
+                    <div class="hidden md:flex">
+                        <ul class="menu menu-horizontal px-2 flex-nowrap">
+                            <li class="justify-center"><a><i class="fas fa-search"></i></a></li>
+                            <li class="justify-center"><a><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="p-1 justify-center"><button class="btn px-7 btn-outline  border-[#179800] hover:bg-[#179800] text-xl font-normal">Login</button></li>
+                            <li class="p-1 justify-center hidden lg:flex"><button class="btn px-7 bg-[#179800] text-white text-xl font-normal">Register</button></li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+         </nav>
+    </header>
     
+    <!-- main part in html start -->
+    <main>
+
+    </main>
+    
+    <!-- footer part in html start -->
+    <footer>
+
+    </footer>
 </body>
 </html>
