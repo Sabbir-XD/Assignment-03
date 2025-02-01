@@ -24,18 +24,37 @@
           --font-sora: "Sora", serif;
           --font-AdLam: "ADLaM Display", serif;
         }
-        @theme {
-        --animate-wiggle: wiggle 1s ease-in-out infinite;
-         @keyframes wiggle {
-                   0%,
-           100% {
-             transform: rotate(-3deg);
+
+        @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+        }
+
+        .text-animated-bg {
+        background: linear-gradient(90deg, #179800, #ff8a00, #111111, #6b41ff);
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradientBG 5s ease infinite;
+        }
+
+        /* Floating Animation (Image) */
+        @keyframes float {
+            0% {
+            transform: translateY(0);
             }
             50% {
-              transform: rotate(3deg);
+            transform: translateY(-10px);
             }
-           }
-          }
+            100% {
+            transform: translateY(0);
+            }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite, slideIn 1s ease-out forwards;
+        }
+        
       </style>
 </head>
 <body class="font-sora box-border">
@@ -64,7 +83,7 @@
                       <div tabindex="0" role="button" class="btn btn-ghost btn-circle sm:hidden">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          class="h-5 w-5 text-title"
+                          class="h-8 w-8 text-title"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor">
@@ -96,18 +115,22 @@
             <p class="border-b-2 border-[#179800] block sm:hidden"></p>
          </nav>
          <!-- banner part start -->
-        <section class="container mx-auto">
-            <!-- banner contain -->
+         <section class="container mx-auto">
+            <!-- Banner Content -->
             <div class="mt-12 w-10/12 mx-auto text-center">
-              <h1 class="text-heading text-[32px] md:text-[56px] font-semibold">Freshness <span class="text-[#179800]">You Can <br>
-                  Count </span> On, Prices You’ll Love!</h1>
-              <p class="text-heading text-base md:text-xl font-light md:font-normal mt-8">Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br> staples, we’ve got you covered every day!</p>
+              <h1 class="text-heading text-[32px] md:text-[56px] font-semibold">
+                Freshness <span class="text-[#179800]">You Can <br> Count </span> On, Prices You’ll Love!
+              </h1>
+              <p class="text-animated-bg text-heading text-base md:text-xl font-light md:font-normal mt-8">
+                Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day!
+              </p>
             </div>
-            <!-- banner image -->
-            <div class="max-w-full justify-items-center animate-wiggle">
+          
+            <!-- Banner Image -->
+            <div class="max-w-full flex justify-center transition-all animate-float">
               <img src="./assets/image/hero-vegetables.png" alt="" class="w-fit">
             </div>
-        </section>
+          </section>
     </header>
     
     <!-- main part in html start -->
@@ -159,8 +182,8 @@
                               <p class="text-heading">Discover a world of treats, toys, and <br>essentials handpicked for you.</p>
                               <button class="btn px-8 bg-white text-heading">Buy Now</button>                     
                           </div>
-                          <div class="justify-items-end">
-                            <img src="./assets/image/vegetable-offer.png" alt="Offer">
+                          <div class="justify-items-end w-full md:-mt-20 -mt-16">
+                            <img src="./assets/image/vegetable-offer.png" alt="Offer" class="w-fit">
                         </div>
                       </div>
       
